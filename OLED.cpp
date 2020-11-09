@@ -663,11 +663,13 @@ void COLED::OLED_statusbar()
     else if (m_displayLogoScreensaver) {
         m_display.drawBitmap(0, 0, logo_glcd_bmp, 128, 16, WHITE);
 
-	m_display.setCursor(40,OLED_LINE4);
-	m_display.print("Mode idle");
+// changes for modem mode idle
 
-	m_display.setCursor(0,OLED_LINE6);
-	m_display.printf("%s",m_ipaddress.c_str());
+    m_display.setCursor(40,OLED_LINE4);
+    m_display.print("Mode idle");
+
+    m_display.setCursor(0,OLED_LINE6);
+    m_display.printf("%s",m_ipaddress.c_str());
 
     }
 
